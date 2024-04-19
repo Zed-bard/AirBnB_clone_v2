@@ -1,3 +1,22 @@
+#!/usr/bin/python3
+"""Flask web application for AirBnB clone project
+
+This script starts a Flask web application that displays an interface similar
+to the provided 8-index.html, but using the 100-hbnb.html template. It fetches
+data from the storage engine (FileStorage or DBStorage) and displays states,
+cities, amenities, and places.
+
+**Requirements:**
+* Flask
+* SQLAlchemy
+* AirBnB_clone_v2 project with models.py and 100-hbnb.html template
+* Running and valid setup_mysql_dev.sql in AirBnB_clone_v2
+
+**Instructions:**
+1. Make sure all tables are created in your database (run echo "quit" | ... ./console.py).
+2. Run this script: ./hbnb_web.py
+"""
+
 from flask import Flask, render_template, teardown_appcontext
 from models import storage, State, City, Amenity, Place
 
